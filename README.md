@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# DoNow
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+DoNow is a React Native Expo application for managing daily tasks and to-do items. The project currently uses Expo Router with a tab-based layout and a modal screen placeholder.
 
-## Get started
+## Project Status
 
-1. Install dependencies
+This repository is in an early scaffold stage. The Expo starter UI is present, and the folder structure is set up for a task-management application.
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native
+- Expo SDK
+- Expo Router
+- TypeScript
+- React Navigation
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Install dependencies:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Start the development server:
 
-## Learn more
+```bash
+npm start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Or run platform-specific development commands:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm run android
+npm run ios
+npm run web
+```
 
-## Join the community
+## Scripts
 
-Join our community of developers creating universal apps.
+The available scripts are defined in [package.json](package.json):
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- `npm start` - launch Expo development server
+- `npm run android` - start the Expo project in Android mode
+- `npm run ios` - start the Expo project in iOS mode
+- `npm run web` - start the Expo project for web
+- `npm run lint` - run Expo linting
+- `npm run reset-project` - restore or reset the Expo starter project
+
+## App Structure
+
+```text
+app/
+  _layout.tsx          Root Expo Router layout
+  modal.tsx            Modal screen
+  (tabs)/
+    _layout.tsx        Tab navigation layout
+    index.tsx          Home screen
+    explore.tsx        Explore screen
+components/            Reusable UI and screen helpers
+constants/            Theme configuration
+hooks/                Theme and color-scheme hooks
+assets/images/        App assets and images
+```
+
+## Development Notes
+
+The application is configured with file-based routing using Expo Router. The home screen and the explore tab are mapped in the tabs layout under the app directory.
+
+## License
+
+This project is currently a private/development workspace and does not define a package license yet.
